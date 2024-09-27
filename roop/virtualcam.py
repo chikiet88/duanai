@@ -18,7 +18,7 @@ def virtualcamera(streamobs, use_xseg, use_mouthrestore, cam_num,width,height):
 
     #time.sleep(2)
     print('Starting capture')
-    cap = cv2.VideoCapture(cam_num, cv2.CAP_DSHOW if platform.system() != 'Darwin' else cv2.CAP_AVFOUNDATION)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW if platform.system() != 'Darwin' else cv2.CAP_AVFOUNDATION)
     if not cap.isOpened():
         print("Cannot open camera")
         cap.release()
